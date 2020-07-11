@@ -10,23 +10,33 @@ import java.io.IOException;
 
 public class Service {
 	
+	public static User[] users = new User[4];
+	
 	public static void readFile() {
 	String[] userData = null;
 	BufferedReader reader = null;
 	
-	User[] users = new User[4];
+		
+		
+		
+	   
+		
 	try {
 		reader = new BufferedReader(new FileReader("data.txt"));
 		
 		String line;	
 		int i = 0;
+		
+		
 		while((line = reader.readLine())!= null) {
 				
+				
 				userData = line.split(",");
-				
 				users[i] = new User(userData);
-				System.out.println("Users"+i+": "+users[i].getInfo());
-				
+//				System.out.println("Users"+i+": "+users[i].getInfo());
+//				System.out.println("Usersemail"+i+": "+users[i].getEmail());
+//				System.out.println("Userspassword"+i+": "+users[i].getPassword());
+//				System.out.println("Usersname"+i+": "+users[i].getName());
 				i++;
 				}
 
@@ -51,21 +61,6 @@ public class Service {
 	}
 	
 	}
-//}
-//	
-	
-//	public User createUser(String[] userData) {
-//		User user = new User(userData);
-//		
-//		
-//		
-//		
-//		
-//		System.out.println("users email: " +User.getEmail());
-//		System.out.println("users password: " + User.getPassword());
-//		System.out.println("users name: " + User.getName());
-//		return user;
-//	}
 }
 
 

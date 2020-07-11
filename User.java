@@ -2,10 +2,9 @@ package com.assignement2;
 
 public class User {
 
-	
-	private static String email;
-	 private static String password;
-	 private static String name;
+	private String email;
+	private String password;
+	private String name;
 	
 	
 	 //constructor
@@ -19,30 +18,32 @@ public class User {
 	  
 	  
 	  
-	 public static String getEmail() {
+	 public String getEmail() {
 		 return email;
 	 }
-	 public static void setEmail(String email) {
-		 User.email = email;
+	 public  void setEmail(String email) {
+		 this.email = email;
 	 }
 	 
-	 public static String getPassword() {
+	 public  String getPassword() {
 		 return password;
 	 }
-	 public static void setPassword(String password) {
-		 User.password = password;
+	 public  void setPassword(String password) {
+		 this.password = password;
 	 }
 	 
-	 public static String getName() {
+	 public  String getName() {
 		 return name;
 	 }
-	 public static void setName(String name) {
-		 User.name = name;
+	 public  void setName(String name) {
+		 this.name = name;
 	 }
 	 
 	 String getInfo() {
 		 return "Email: " + email+", Password: "+ password+", Name: "+name;
 	 }
 	
-
+	
+	
+		
 }
